@@ -1,0 +1,28 @@
+{
+    "name": "gm-i18n",
+    "version": "1.0.0",
+    "description": "i18n",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/gmfe/gm-i18n.git"
+    },
+    "keywords": [
+        "i18next"
+    ],
+    "author": "gmfe",
+    "license": "ISC",
+    "dependencies": {
+        "i18next": "^10.6.0",
+        "i18next-browser-languagedetector": "^2.1.0",
+        "i18next-xhr-backend": "^1.5.1",
+        "gm_static_storage": "^1.0.4"
+    },
+    "bugs": {
+        "url": "https://github.com/gmfe/gm-i18n/issues"
+    },
+    "homepage": "https://github.com/gmfe/gm-i18n#readme"
+}
