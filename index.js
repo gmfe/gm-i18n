@@ -60,7 +60,7 @@ function i18nextInit(i18nextConfig, staticConfig) {
     };
     i18next.use(LanguageDetector).use(Backend).init({
         ...defaultConfig,
-        i18nextConfig
+        ...i18nextConfig
     });
 }
 
