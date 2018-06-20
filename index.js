@@ -3,6 +3,9 @@ import Backend from 'i18next-xhr-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import {getStaticStorage} from 'gm_static_storage';
 
+const env = process.env.NODE_ENV;
+const isDev = env === 'development';
+
 const {localStorage} = window;
 const GM_I18NEXT_LANGUAGE_VERSION = 'gm_i18next_language_version';
 
@@ -56,7 +59,7 @@ function i18nextInit(i18nextConfig, staticConfig) {
 
         // 如果使用后端加载资源，则将其设置为false - 通过这种方式可以在初始化之后调用i18next.t。
         initImmediate: false,
-        debug: true
+        debug: isDev
     };
     i18next.use(LanguageDetector).use(Backend).init({
         ...defaultConfig,
