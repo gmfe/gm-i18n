@@ -17,9 +17,7 @@
     "license": "ISC",
     "dependencies": {
         "i18next": "^10.6.0",
-        "i18next-browser-languagedetector": "^2.1.0",
-        "i18next-xhr-backend": "^1.5.1",
-        "gm_static_storage": "^1.0.4"
+        "i18next-browser-languagedetector": "^2.1.0"
     },
     "bugs": {
         "url": "https://github.com/gmfe/gm-i18n/issues"
