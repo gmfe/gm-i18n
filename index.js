@@ -36,7 +36,7 @@ function i18nextInit(i18nextConfig) {
         // initImmediate: false,
         debug: false
     };
-    i18next.use(LanguageDetector).init({
+    i18next.init({
         ...defaultConfig,
         ...i18nextConfig
     });
