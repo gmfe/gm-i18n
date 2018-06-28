@@ -3,7 +3,7 @@ import Cookie from 'js-cookie';
 
 const GUAIMAI_LANGUAGE = 'guanmai_language';
 
-const getDefaultLng = () => Cookie.get(GUAIMAI_LANGUAGE) || window.navigator.language.slice(0, 1);
+const getDefaultLng = () => Cookie.get(GUAIMAI_LANGUAGE) || window.navigator.language.slice(0, 2);
 const setLngInCookie = (lng) => Cookie.set(GUAIMAI_LANGUAGE, lng);
 
 function i18nextInit(i18nextConfig) {
