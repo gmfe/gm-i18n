@@ -17,7 +17,7 @@
     "license": "ISC",
     "dependencies": {
         "i18next": "^10.6.0",
-        "i18next-browser-languagedetector": "^2.1.0"
+        "js-cookie": "^2.2.0"
     },
     "bugs": {
         "url": "https://github.com/gmfe/gm-i18n/issues"

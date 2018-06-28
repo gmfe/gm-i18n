@@ -1,16 +1,14 @@
 import i18next from 'i18next';
-import LanguageDetector from 'i18next-browser-languagedetector';
+import Cookie from 'js-cookie';
+
+const GUAIMAI_LANGUAGE = 'guanmai_language';
+
+const getDefaultLng = () => Cookie.get(GUAIMAI_LANGUAGE) || window.navigator.language.slice(0, 1);
+const setLngInCookie = (lng) => Cookie.set(GUAIMAI_LANGUAGE, lng);
 
 function i18nextInit(i18nextConfig) {
     const defaultConfig = {
-        // 检测浏览器语言
-        detection: {
-            //  使用的检测方法,官方提供
-            order: ['cookie', 'navigator'],
-            // keys or params to lookup language from
-            lookupCookie: 'guanmai_language'
-        },
-
+        lng: getDefaultLng(),
         // 当前语言包没提供翻译文件的时候,使用的默认语言
         fallbackLng: 'zh',
         // 没找到key的时候,做以下处理
@@ -46,5 +44,7 @@ function i18nextInit(i18nextConfig) {
 
 export {
     i18nextInit,
-    i18next
+    i18next,
+    getDefaultLng,
+    setLngInCookie
 }
