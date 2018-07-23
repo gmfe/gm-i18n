@@ -41,7 +41,7 @@ function i18nextInit (i18nextConfig) {
     ...i18nextConfig
   })
 }
-
+export * from './util'
 export {
   i18nextInit,
   i18next,
