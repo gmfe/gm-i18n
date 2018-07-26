@@ -28,6 +28,7 @@ function i18nextInit (i18nextConfig) {
     nsSeparator: '@',
 
     interpolation: {
+      escapeValue: false,
       prefix: '${',
       suffix: '}'
     },
