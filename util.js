@@ -14,7 +14,9 @@ const number2Ordinal = (number) => {
   }
   return `${number}${getSuffix()}`
 }
-
+const isEnglish = () => {
+  return i18next.language === 'en'
+}
 export {
-  number2Ordinal
+  number2Ordinal, isEnglish
 }
