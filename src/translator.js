@@ -21,6 +21,9 @@ class Translator {
   initLanguage () {
     Translator.lng = getCurrentLng()
   }
+  t (...args) {
+    return this.translate(...args)
+  }
   translate (key, data) {
     let tpl = this._getCurrentResource()[key]
     // fallback zh
