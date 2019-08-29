@@ -35,6 +35,7 @@ const GETTER = {
 // 脚本用的
 const SUPPORT_PROJECTS = [
   {value: 'pa', text: '采购app'},
+  {value: 'supplier', text: '供应商app'},
   {value: 'driver', text: '司机app'},
   {value: 'bshop', text: 'bshop商城'},
   {value: 'station', text: 'station'},

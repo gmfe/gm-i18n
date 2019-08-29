@@ -2,7 +2,11 @@ import {getCurrentLng} from './storage'
 import { GETTER, IDENTIFIER } from './constant'
 
 const createInitializer = (baseUrl, projectName) => {
-  const versionUrl = `${GETTER.VERSION_URL(baseUrl, projectName)}?random=${Math.random()}`
+  const date = new Date()
+  const tags = [date.getUTCFullYear(), date.getUTCMonth() + 1, date.getUTCDate(), date.getUTCHours()]
+  const random = tags.join('-')
+  const versionUrl = `${GETTER.VERSION_URL(baseUrl, projectName)}?random=${random}`
+
   return {
     loadVersionJS () {
       const curLanguageCode = getCurrentLng()
