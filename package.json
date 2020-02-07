@@ -6,7 +6,7 @@
     "scripts": {
         "build:cdn": "rm -rf ./build && webpack --config webpack.config.cdn.js",
         "build:npm": "rm -rf ./dist && webpack --config webpack.config.npm.js",
-        "deploy": "npm run build:cdn && rsync -aztvH --rsh=ssh ./build/ superman@static.cluster.gm:/data/www/static_resource/libs/gm-i18n/",
+        "deploy": "npm run build:cdn && rsync -aztvH --rsh=ssh ./build/ static:/data/www/static_resource/libs/gm-i18n/",
         "prepublishOnly": "npm run build:npm"
     },
     "repository": {
