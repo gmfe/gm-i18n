@@ -1,6 +1,9 @@
 # gm-i18n
 🇻🇳🇺🇸国际化
 
+## 发布CDN
+ssh gate => cd /data/frontend_release/gm-i18n
+然后： npm run deploy
 ## CHANGELOG
 ### V2
 getDefaultLng -> getCurrentLng
