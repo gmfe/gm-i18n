@@ -42,7 +42,8 @@ const SUPPORT_PROJECTS = [
   {value: 'station', text: 'station'},
   {value: 'manage', text: 'manage'},
   {value: 'upms', text: '用户管理系统'},
-  {value: 'mes', text: '分拣软件'}
+  {value: 'mes', text: '分拣软件'},
+  {value: 'cshop', text: 'c端商城'}
 ]
 const getLanguageDesc = (code) => {
   const res = SUPPORT_LANGUAGES.find((lng) => lng.value === code) || {}
