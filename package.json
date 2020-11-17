@@ -1,6 +1,6 @@
 {
     "name": "gm-i18n",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "description": "i18n",
     "main": "dist/index.js",
     "scripts": {
@@ -27,10 +27,10 @@
     },
     "homepage": "https://github.com/gmfe/gm-i18n#readme",
     "devDependencies": {
-        "@babel/core": "^7.4.3",
-        "@babel/preset-env": "^7.4.3",
-        "babel-eslint": "^8.2.5",
-        "babel-loader": "^8.0.5",
+        "@babel/core": "^7.12.3",
+        "@babel/preset-env": "^7.12.1",
+        "babel-eslint": "^8.2.6",
+        "babel-loader": "^8.2.1",
         "eslint": "^5.0.1",
         "eslint-config-standard": "^11.0.0",
         "eslint-config-standard-jsx": "^5.0.0",

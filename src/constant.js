@@ -3,7 +3,8 @@ const SUPPORT_FOREIGN_LANGUAGES = [
   {value: 'zh-HK', text: '繁體中文', desc: '繁体中文'},
   {value: 'en', text: 'English', desc: '英语'},
   {value: 'th', text: 'ภาษาไทย', desc: '泰语'},
-  {value: 'ug', text: 'ئۇيغۇر', desc: '维吾尔语'}
+  {value: 'ug', text: 'ئۇيغۇر', desc: '维吾尔语'},
+  {value: 'kh', text: 'ប្រទេសកម្ពុជា', desc: '柬埔寨'}
 ]
 
 const SUPPORT_LANGUAGES = [
