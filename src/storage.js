@@ -20,7 +20,7 @@ const getCurrentLng = () => {
 }
 const setCurrentLng = (lngCode) => {
   let validCode = verifyLanguageCode(lngCode)
-  Cookie.set(KEYS.COOKIE_CODE_KEY, validCode)
+  Cookie.set(KEYS.COOKIE_CODE_KEY, validCode, { expires: 365 })
 }
 export {
   getCurrentLng, setCurrentLng
