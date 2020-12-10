@@ -12,7 +12,7 @@ const verifyLanguageCode = (code) => {
 }
 
 const getCurrentLng = () => {
-  let curCode = Cookie.get(KEYS.COOKIE_CODE_KEY)
+  let curCode = Cookie.get(KEYS.STORAGE_LANG_CODE_KEY) || window.localStorage.getItem(KEYS.STORAGE_LANG_CODE_KEY)
   if (!curCode) {
     curCode = window.navigator.language.slice(0, 2)
   }
@@ -20,7 +20,8 @@ const getCurrentLng = () => {
 }
 const setCurrentLng = (lngCode) => {
   let validCode = verifyLanguageCode(lngCode)
-  Cookie.set(KEYS.COOKIE_CODE_KEY, validCode, { expires: 365 })
+
+  window.localStorage.setItem(KEYS.STORAGE_LANG_CODE_KEY, validCode)
 }
 export {
   getCurrentLng, setCurrentLng

@@ -13,7 +13,7 @@ const SUPPORT_LANGUAGES = [
 ]
 
 const KEYS = {
-  COOKIE_CODE_KEY: 'guanmai_language'
+  STORAGE_LANG_CODE_KEY: 'guanmai_language'
 }
 
 const IDENTIFIER = {
