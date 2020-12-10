@@ -1,6 +1,6 @@
 {
     "name": "gm-i18n",
-    "version": "2.2.4",
+    "version": "2.2.5",
     "description": "i18n",
     "main": "dist/index.js",
     "scripts": {
