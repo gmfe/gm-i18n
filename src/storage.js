@@ -12,7 +12,7 @@ const verifyLanguageCode = (code) => {
 }
 
 const getCurrentLng = () => {
-  let curCode = Cookie.get(KEYS.STORAGE_LANG_CODE_KEY) || window.localStorage.getItem(KEYS.STORAGE_LANG_CODE_KEY)
+  let curCode = window.localStorage.getItem(KEYS.STORAGE_LANG_CODE_KEY) || Cookie.get(KEYS.STORAGE_LANG_CODE_KEY)
   if (!curCode) {
     curCode = window.navigator.language.slice(0, 2)
   }
