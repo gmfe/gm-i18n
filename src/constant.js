@@ -47,7 +47,7 @@ const SUPPORT_PROJECTS = [
   {value: 'cshop', text: 'c端商城'},
   {value: 'club', text: '团长小程序'},
   {value: 'bshopv2', text: 'bshop新ui'},
-  { value: 'sonicMerchantCenter', text: '速麦通' },
+  { value: 'sonicMerchantCenter', text: '速麦通入门版' },
   { value: 'sonicSortingSystem', text: '速麦通分拣端' }
 ]
 const getLanguageDesc = (code) => {
