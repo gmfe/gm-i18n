@@ -4,7 +4,8 @@ const SUPPORT_FOREIGN_LANGUAGES = [
   {value: 'en', text: 'English', desc: '英语'},
   {value: 'th', text: 'ภาษาไทย', desc: '泰语'},
   {value: 'ug', text: 'ئۇيغۇر', desc: '维吾尔语'},
-  {value: 'kh', text: 'ប្រទេសកម្ពុជា', desc: '柬埔寨'}
+  {value: 'kh', text: 'ប្រទេសកម្ពុជា', desc: '柬埔寨'},
+  { value: 'ina', text: 'Indonesia', desc: '印尼' }
 ]
 
 const SUPPORT_LANGUAGES = [
