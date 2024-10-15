@@ -49,7 +49,10 @@ const SUPPORT_PROJECTS = [
   {value: 'club', text: '团长小程序'},
   {value: 'bshopv2', text: 'bshop新ui'},
   { value: 'sonicMerchantCenter', text: '速麦通入门版' },
-  { value: 'sonicSortingSystem', text: '速麦通分拣端' }
+  { value: 'sonicSortingSystem', text: '速麦通分拣端' },
+  { value: 'q_mes', text: '新架构工位屏' },
+  { value: 'q_erp', text: '新架构erp' },
+  { value: 'q_wsm', text: 'wsm' },
 ]
 const getLanguageDesc = (code) => {
   const res = SUPPORT_LANGUAGES.find((lng) => lng.value === code) || {}
