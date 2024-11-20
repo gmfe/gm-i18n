@@ -1,4 +1,4 @@
-import {getCurrentLng} from './storage'
+import { getCurrentLng } from './storage'
 
 // const prefix = '${'
 // const suffix = '}'
@@ -8,23 +8,23 @@ const separator = '__'
 class Translator {
   // { zh: { key: '' }, zh-HK: {} }
   // 肯定有zh
-  constructor () {
+  constructor() {
     this.resources = {}
   }
 
-  _getSimplifiedChineseTpl (key) {
+  _getSimplifiedChineseTpl(key) {
     return this.resources['zh'][key]
   }
-  _getCurrentResource () {
+  _getCurrentResource() {
     return this.resources[Translator.lng] || {}
   }
-  initLanguage () {
+  initLanguage() {
     Translator.lng = getCurrentLng()
   }
-  t (...args) {
+  t(...args) {
     return this.translate(...args)
   }
-  translate (key, data) {
+  translate(key, data) {
     let tpl = this._getCurrentResource()[key]
     // fallback zh
     if (!tpl) {
@@ -46,18 +46,21 @@ class Translator {
     return result
   }
   // 可以给库文件调用
-  loadResources (resources) { // languageCode, resource
+  loadResources(resources) { // languageCode, resource
     this.resources = resources
   }
   // 多语js script 调用
-  loadResource (languageCode, resource) {
-    this.resources[languageCode] = {
-      ...(this.resources[languageCode] || {}),
+  // 为了合并配置平台的json文件以及本地的json文件，新增scheduler为了调度合并顺序
+  // 按照当前的实现方式会先加载配置平台文件，再执行程序代码，所以没加调度判断的话可能会造成本地json覆盖配置平台json问题
+  loadResource(languageCode, resource, scheduler) {
+    const prevResources = (this.resources[languageCode] || {})
+    this.resources[languageCode] = scheduler ? scheduler(prevResources, resource) : {
+      ...prevResources,
       ...(resource || {})
     }
   }
   // 打包中文调用
-  loadSimplifiedChinese (resource) {
+  loadSimplifiedChinese(resource) {
     this.initLanguage()
     this.resources['zh'] = resource
   }
@@ -69,7 +72,7 @@ const appTranslator = new Translator()
 const t = (...args) => appTranslator.translate(...args)
 // 兼容
 const i18next = {
-  t (...args) {
+  t(...args) {
     return t(...args)
   }
 }
