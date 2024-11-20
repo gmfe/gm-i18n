@@ -51,7 +51,10 @@ class Translator {
   }
   // 多语js script 调用
   loadResource (languageCode, resource) {
-    this.resources[languageCode] = resource
+    this.resources[languageCode] = {
+      ...(this.resources[languageCode] || {}),
+      ...(resource || {})
+    }
   }
   // 打包中文调用
   loadSimplifiedChinese (resource) {
