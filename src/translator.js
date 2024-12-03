@@ -33,11 +33,12 @@ class Translator {
     if (!tpl) {
       if (regex.test(key)) {
         console.error(`插值${key}找不到对应模板，请检查或使用 i18n-m sync 同步`)
-        return null
-      } else {
-        // 取key的场景
-        tpl = key.split(separator).pop()
-      }
+      // 匹配到带占位符的字符串不要返回空
+      // 中文目前是没有自己的resource的，值就是这个key
+      // return null
+      } 
+      // 取key的场景
+      tpl = key.split(separator).pop()
     }
 
     let result = tpl.replace(regex, (match, $0) => {
